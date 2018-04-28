@@ -5,21 +5,15 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.5.1
 
-* System dependencies
+* Database creation: rake db:create && rake db:migrate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+* Database: postgres
 
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions: 
 
-* ...
-# qanda
