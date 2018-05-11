@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :answer do
+    body 'MyText'
+    association :question
+    association :user
+  end
+
   factory :question do
     title 'Title'
     body 'Body'
