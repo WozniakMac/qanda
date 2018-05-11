@@ -18,6 +18,14 @@ RSpec.describe QuestionsController, type: :controller do
     end
   end
 
+  describe 'GET #search' do
+    it 'returns a success response' do
+      Question.create! valid_attributes
+      get :index, params: {search: valid_attributes[:title]}, session: valid_session
+      expect(response).to be_successful
+    end
+  end
+
   describe 'GET #show' do
     it 'returns a success response' do
       question = Question.create! valid_attributes

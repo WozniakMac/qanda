@@ -24,3 +24,10 @@ br
 
 div
   = link_to 'New Question', new_question_path
+
+
+div
+  = form_tag(:search, method: :get) do
+    |  Store :
+    = text_field_tag :search, params[:search]
+    = submit_tag 'Search'

@@ -45,6 +45,19 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search]
+      clean_params = params[:search].gsub(/[^0-9A-Za-z]/, '').strip.downcase
+      @questions = Question.where('lower(body) LIKE ? OR lower(title) LIKE ?', "%#{clean_params}%", "%#{clean_params}%")
+    else
+      @questions = Question.all
+    end
+
+    respond_to do |format|
+      format.html { render :index }
+    end
+  end
+
   private
 
   def set_question
