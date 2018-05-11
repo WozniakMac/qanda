@@ -14,7 +14,7 @@ table
     - @questions.each do |question|
       tr
         td = question.title
-        td = question.body
+        td = markdown(question.body)
         td = "#{question.user.first_name} #{question.user.last_name}"
         td = link_to 'Show', question
         td = link_to 'Edit', edit_question_path(question)

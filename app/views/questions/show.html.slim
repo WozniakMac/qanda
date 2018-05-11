@@ -5,7 +5,7 @@ p
   = @question.title
 p
   strong Body:
-  = @question.body
+  = markdown(@question.body)
 p
   strong User:
   = "#{@question.user.first_name} #{@question.user.last_name}"
