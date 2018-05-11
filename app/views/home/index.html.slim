@@ -5,10 +5,10 @@ a[href="/auth/google_oauth2"]
 
 
 - if current_user
-  - current_user.attributes.each do |k, v|
-    b
-      = k
-      | :
-    = v
-    br
-  = link_to 'Logout', :logout
+  div
+    = "Hi #{current_user.first_name}"
+  div
+    = link_to 'Logout', :logout
+
+div
+  = link_to 'Questions', :questions
