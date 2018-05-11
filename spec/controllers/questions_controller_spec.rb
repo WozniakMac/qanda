@@ -83,7 +83,7 @@ RSpec.describe QuestionsController, type: :controller do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) do
-        {body: 'New body'}
+        { body: 'New body' }
       end
 
       it 'updates the requested question' do
