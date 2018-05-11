@@ -11,9 +11,5 @@ Things you may want to cover:
 
 * Database: postgres
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions: 
+* How to run the test suite: bundle exec rake
 
