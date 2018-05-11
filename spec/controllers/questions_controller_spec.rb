@@ -12,7 +12,7 @@ RSpec.describe QuestionsController, type: :controller do
 
   describe 'GET #index' do
     it 'returns a success response' do
-      question = Question.create! valid_attributes
+      Question.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
