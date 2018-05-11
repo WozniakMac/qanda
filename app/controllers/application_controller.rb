@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
   def user_logged_in?
     current_user.present?
   end
+
+  def validate_author(object)
+    redirect_back(fallback_location: root_path) unless current_user == object.user
+  end
 end
