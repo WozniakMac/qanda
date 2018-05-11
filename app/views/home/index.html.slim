@@ -1,0 +1,14 @@
+h1
+  |  Welcome
+a[href="/auth/google_oauth2"]
+  | Sign in with Google
+
+
+- if current_user
+  - current_user.attributes.each do |k, v|
+    b
+      = k
+      | :
+    = v
+    br
+  = link_to 'Logout', :logout
