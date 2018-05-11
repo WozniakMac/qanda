@@ -10,6 +10,7 @@ Metrics/BlockLength:
     - 'Rakefile'
     - '**/*.rake'
     - 'spec/**/*.rb'
+    - 'db/schema.rb'
 
 Style/Documentation:
   Exclude:

@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :books
+  has_many :questions
+  has_many :answers
 
   validates :provider, presence: true
   validates :uid, presence: true
